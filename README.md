@@ -57,13 +57,20 @@ they also have to mine to send data to clients but are paid back in kerms by the
 
 
 **Important Notes:**
-a client shouldn't waste more than a few ms of mining to produce a request at a reasonable distance and reasonable data rate to host
-this will most likely be based on the tried and tested CJDNS networking stack
-amount of (unit currency)kerms will be uncapped, to discourage real life trading with it
-nodes can set their own custom kerm price
-nodes can use wireless connections to reach clients as its just cheaper than wiring Ethernet or fiber to them
-every client can be a node, every host can be a node. already mentioned incentives are given to both for being so
-every node is technically also a client and host
+
+1.a client shouldn't waste more than a few ms of mining to produce a request at a reasonable distance and reasonable data rate to host
+
+2.this will most likely be based on the tried and tested CJDNS networking stack
+
+3.amount of (unit currency)kerms will be uncapped, to discourage real life trading with it
+
+4.nodes can set their own custom kerm price
+
+5.nodes can use wireless connections to reach clients as its just cheaper than wiring Ethernet or fiber to them
+
+6.every client can be a node, every host can be a node. already mentioned incentives are given to both for being so
+
+7.every node is technically also a client and host
 
 
 
