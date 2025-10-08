@@ -5,7 +5,7 @@ Alternative to the internet
 the modern internet mainly consists of centralized servers allowing users to connect to other users
 Main issues with centralized servers:
 
-1.ISPS hold a great deal of power over citizens and they abuse it, making customers pay enormous amounts compared to the costs of the real cost of connecting that user to the internet
+1.ISPS hold a great deal of power over citizens and they abuse it, making customers pay enormous amounts compared to real cost of connecting that user to the internet
 
 2.those central servers exist within countries therefor governments impose regulations over any services over the internet
 
@@ -14,12 +14,14 @@ Main issues with centralized servers:
 
 **What is Kermnet exactly?**
 
-at core, its a large mesh network utilizing cryptographic hashes and proof of work to verify anything done on Kermnet
+at core, its a large mesh network utilizing cryptographic solving of hashes to provide basic rules in requests and incentive for nodes to work
 
 nodes broadcast connections to other nodes/clients
 
 every client holds a ledger of all/parts of every requests ever made, similar to bitcoins (full and lightweight nodes), they themselves need to mine in order to make requests
 clients need to mine a very small amount to produce a request
+Example:
+client would need to cryptographically solve #z requests to send 1 request at x data rate with y data amount
 
 why mining? why crypto based? why even verify requests on kermnet?
 
@@ -36,6 +38,7 @@ every request has a client,host, and nodes in between
 a client mines till it reaches the nessasary amount of kerms to pay each node on the way to the host, and the host themselves as the host needs to pay nodes on the way to the client in order to reply. obviously it routes by the least node amounts and varies how many node routes are used in parallel depending on how what data rate(bytes/kilobytes/megabytes/etc) its trying to send at. also pays exponentially more for higher data rates on nodes its already sending on
 
 -this makes it more computationally expensive on a client to send requests to a very far or virtually unreachable host
+
 -this makes it more computationally expensive on a client to ask a host to send replies at high data rates
 
 this also makes sure clients can't flood nodes with extremely high data rates as they'd need to mine much more to do that
@@ -60,7 +63,7 @@ they also have to mine to send data to clients but are paid back in kerms by the
 
 1.a client shouldn't waste more than a few ms of mining to produce a request at a reasonable distance and reasonable data rate to host
 
-2.this will most likely be based on the tried and tested CJDNS networking stack
+2.this will most likely be based on the tried and tested CJDNS(networking stack)
 
 3.amount of (unit currency)kerms will be uncapped, to discourage real life trading with it
 
@@ -89,6 +92,10 @@ Host and Client talking over nodes:
 2.Client is anonymous to host, vice versa; although you'd think every request's "connectionnumber,host public id,client public id,extradata" being exposed on ledgers would make it extremely public, due to both being able to change their (ipv6 address + public id) freely and nodes being in between most clients and hosts it causes no node to truly know if a request came from any other specific node, but only the general direction of it
 
 3.It addresses a need of the people so has a slightly better chance of actually being adopted
+
+4.Self regulated by nodes custom kerm rates
+
+5. due to the inflating nature of kerms due to interactions producing more kerms, its given reason to be spent immediately instead of hoarded. 
 
 
 **Issues to be aware of:**
