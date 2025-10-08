@@ -9,7 +9,7 @@ Main issues with centralized servers:
 
 2.those central servers exist within countries therefor governments impose regulations over any services over the internet
 
-3.Bad actors/authorities try to restrict your actions on the internet, disallowing any form of free speach or rights you have
+3.Bad actors/authorities try to restrict your actions on the internet, disallowing any form of free speech or rights you have
 
 
 **What is Kermnet exactly?**
@@ -24,21 +24,21 @@ clients need to mine a very small amount to produce a request
 why mining? why crypto based? why even verify requests on kermnet?
 
 In-short, to give incentive for nodes to share connections with more clients
-As a client mines it produces a very small amount of whatever digital unit currency(kerms), a small percentage of kerms mined by a client go to the node which gave it access to the larger mesh, this makes nodes care about reaching clients, this requires defining what a larger mesh is so every node isnt stealing a percentage of every other nodes kerms 
+As a client mines it produces a very small amount of whatever digital unit currency(kerms), a small percentage of kerms mined by a client go to the node which gave it access to the larger mesh, this makes nodes care about reaching clients, this requires defining what a larger mesh is so every node isn't stealing a percentage of every other nodes kerms 
 
-Larger Mesh: a mesh consisting of atleast 50 nodes meshed together
+Larger Mesh: a mesh consisting of at least 50 nodes meshed together
 
 
 **Distribution of kerms upon request:**
 
 every request has a client,host, and nodes in between
 
-a client mines till it reaches the nessasary amount of kerms to pay each node on the way to the host, and the host themselves as the host needs to pay nodes on the way to the client in order to reply. obviously it routes by the least node amounts and varies how many node routes are used in parallel depending on how what datarate(bytes/kilobytes/megabytes/etc) its trying to send at. also pays exponentially more for higher datarates on nodes its already sending on
+a client mines till it reaches the nessasary amount of kerms to pay each node on the way to the host, and the host themselves as the host needs to pay nodes on the way to the client in order to reply. obviously it routes by the least node amounts and varies how many node routes are used in parallel depending on how what data rate(bytes/kilobytes/megabytes/etc) its trying to send at. also pays exponentially more for higher data rates on nodes its already sending on
 
 -this makes it more computationally expensive on a client to send requests to a very far or virtually unreachable host
 -this makes it more computationally expensive on a client to ask a host to send replies at high data rates
 
-this also makes sure clients can't flood nodes with extremely high data rates as theyd need to mine much more to do that
+this also makes sure clients can't flood nodes with extremely high data rates as they'd need to mine much more to do that
 
 
 
@@ -57,11 +57,11 @@ they also have to mine to send data to clients but are paid back in kerms by the
 
 
 **Important Notes:**
-a client shouldnt waste more than a few ms of mining to produce a request at a reasonable distance and reasonable datarate to host
+a client shouldn't waste more than a few ms of mining to produce a request at a reasonable distance and reasonable data rate to host
 this will most likely be based on the tried and tested CJDNS networking stack
 amount of (unit currency)kerms will be uncapped, to discourage real life trading with it
 nodes can set their own custom kerm price
-nodes can use wireless connections to reach clients as its just cheaper than wiring ethernet or fiber to them
+nodes can use wireless connections to reach clients as its just cheaper than wiring Ethernet or fiber to them
 every client can be a node, every host can be a node. already mentioned incentives are given to both for being so
 every node is technically also a client and host
 
@@ -90,8 +90,8 @@ Host and Client talking over nodes:
 
 2.If the first node you directly connect to is compromised then you can be tracked
 
-3.its so anonymous hosts have to implement their own system for identifying and verifying users if permenance is required
+3.its so anonymous hosts have to implement their own system for identifying and verifying users if permanence is required
 
-4.My expertise is in radio and microcontrollers. I require more skill for this project
+4.My expertise is in radio and micro-controllers. I require more skill for this project
 
-5.I dont have the resources to do this alone
+5.I don't have the resources to do this alone
