@@ -35,8 +35,8 @@ every request has a client,host, and nodes in between
 
 a client mines till it reaches the nessasary amount of kerms to pay each node on the way to the host, and the host themselves as the host needs to pay nodes on the way to the client in order to reply. obviously it routes by the least node amounts and varies how many node routes are used in parallel depending on how what datarate(bytes/kilobytes/megabytes/etc) its trying to send at. also pays exponentially more for higher datarates on nodes its already sending on
 
-this makes it more computationally expensive on a client to send requests to a very far or virtually unreachable host
-this makes it more computationally expensive on a client to ask a host to send replies at high data rates
+-this makes it more computationally expensive on a client to send requests to a very far or virtually unreachable host
+-this makes it more computationally expensive on a client to ask a host to send replies at high data rates
 
 this also makes sure clients can't flood nodes with extremely high data rates as theyd need to mine much more to do that
 
@@ -67,23 +67,23 @@ every node is technically also a client and host
 
 
 
-client sends data to host:
-
-<img width="580" height="580" alt="Client to host" src="https://github.com/user-attachments/assets/a8a2eae2-5faa-4015-b27f-fc4320ca6945" />
-
-
-
-
-client sends data to host at higher datarate:
-
-<img width="580" height="580" alt="client to host 2" src="https://github.com/user-attachments/assets/8b08d7c5-61bb-4edd-b4f3-481a1783d5ef" />
+Host and Client talking over nodes:
+<img width="1080" height="1080" alt="Node bigger example" src="https://github.com/user-attachments/assets/1d3b579d-48da-4a0e-ac11-2696f47d6f1a" />
 
 
 
 
 
 
+**Benefits**
+1.Decentralized
+2.Client is anonymous to host, vice versa; although you'd think every request's "connectionnumber,host public id,client public id,extradata" being exposed on ledgers would make it extremely public, due to both being able to change their (ipv6 address + public id) freely and nodes being in between most clients and hosts it causes no node to truly know if a request came from any other specific node, but only the general direction of it
+3.It addresses a need of the people so has a slightly better chance of actually being adopted
 
 **Issues to be aware of:**
 
-Higher Energy Consumption
+1.Higher Energy Consumption
+2.If the first node you directly connect to is compromised then you can be tracked
+3.its so anonymous hosts have to implement their own system for identifying and verifying users if permenance is required
+4.My expertise is in radio and microcontrollers. I require more skill for this project
+5.I dont have the resources to do this alone
