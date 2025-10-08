@@ -1,2 +1,89 @@
 # Kermnet
 Alternative to the internet
+
+
+the modern internet mainly consists of centralized servers allowing users to connect to other users
+Main issues with centralized servers:
+
+1.ISPS hold a great deal of power over citizens and they abuse it, making customers pay enormous amounts compared to the costs of the real cost of connecting that user to the internet
+
+2.those central servers exist within countries therefor governments impose regulations over any services over the internet
+
+3.Bad actors/authorities try to restrict your actions on the internet, disallowing any form of free speach or rights you have
+
+
+**What is Kermnet exactly?**
+
+at core, its a large mesh network utilizing cryptographic hashes and proof of work to verify anything done on Kermnet
+
+nodes broadcast connections to other nodes/clients
+
+every client holds a ledger of all/parts of every requests ever made, similar to bitcoins (full and lightweight nodes), they themselves need to mine in order to make requests
+clients need to mine a very small amount to produce a request
+
+why mining? why crypto based? why even verify requests on kermnet?
+
+In-short, to give incentive for nodes to share connections with more clients
+As a client mines it produces a very small amount of whatever digital unit currency(kerms), a small percentage of kerms mined by a client go to the node which gave it access to the larger mesh, this makes nodes care about reaching clients, this requires defining what a larger mesh is so every node isnt stealing a percentage of every other nodes kerms 
+
+Larger Mesh: a mesh consisting of atleast 50 nodes meshed together
+
+
+**Distribution of kerms upon request:**
+
+every request has a client,host, and nodes in between
+
+a client mines till it reaches the nessasary amount of kerms to pay each node on the way to the host, and the host themselves as the host needs to pay nodes on the way to the client in order to reply. obviously it routes by the least node amounts and varies how many node routes are used in parallel depending on how what datarate(bytes/kilobytes/megabytes/etc) its trying to send at. also pays exponentially more for higher datarates on nodes its already sending on
+
+this makes it more computationally expensive on a client to send requests to a very far or virtually unreachable host
+this makes it more computationally expensive on a client to ask a host to send replies at high data rates
+
+this also makes sure clients can't flood nodes with extremely high data rates as theyd need to mine much more to do that
+
+
+
+**Hosts' side of things:**
+they also have to mine to send data to clients but are paid back in kerms by the clients at their own custom rate
+
+
+
+
+
+
+
+
+
+
+
+
+**Important Notes:**
+a client shouldnt waste more than a few ms of mining to produce a request at a reasonable distance and reasonable datarate to host
+this will most likely be based on the tried and tested CJDNS networking stack
+amount of (unit currency)kerms will be uncapped, to discourage real life trading with it
+nodes can set their own custom kerm price
+nodes can use wireless connections to reach clients as its just cheaper than wiring ethernet or fiber to them
+every client can be a node, every host can be a node. already mentioned incentives are given to both for being so
+every node is technically also a client and host
+
+
+
+client sends data to host:
+
+<img width="580" height="580" alt="Client to host" src="https://github.com/user-attachments/assets/a8a2eae2-5faa-4015-b27f-fc4320ca6945" />
+
+
+
+
+client sends data to host at higher datarate:
+
+<img width="580" height="580" alt="client to host 2" src="https://github.com/user-attachments/assets/8b08d7c5-61bb-4edd-b4f3-481a1783d5ef" />
+
+
+
+
+
+
+
+**Issues to be aware of:**
+
+Higher Energy Consumption
