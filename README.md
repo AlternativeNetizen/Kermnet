@@ -102,3 +102,9 @@ Host and Client talking over nodes:
 4.My expertise is in radio and micro-controllers. I require more skill for this project
 
 5.I don't have the resources to do this alone
+
+
+
+
+YT video:
+https://www.youtube.com/watch?v=2H-zGdBOiBY
