@@ -77,7 +77,9 @@ Host and Client talking over nodes:
 
 **Benefits**
 1.Decentralized
+
 2.Client is anonymous to host, vice versa; although you'd think every request's "connectionnumber,host public id,client public id,extradata" being exposed on ledgers would make it extremely public, due to both being able to change their (ipv6 address + public id) freely and nodes being in between most clients and hosts it causes no node to truly know if a request came from any other specific node, but only the general direction of it
+
 3.It addresses a need of the people so has a slightly better chance of actually being adopted
 
 **Issues to be aware of:**
