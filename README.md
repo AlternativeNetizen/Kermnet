@@ -83,7 +83,11 @@ Host and Client talking over nodes:
 **Issues to be aware of:**
 
 1.Higher Energy Consumption
+
 2.If the first node you directly connect to is compromised then you can be tracked
+
 3.its so anonymous hosts have to implement their own system for identifying and verifying users if permenance is required
+
 4.My expertise is in radio and microcontrollers. I require more skill for this project
+
 5.I dont have the resources to do this alone
