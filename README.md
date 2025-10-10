@@ -61,7 +61,7 @@ in the case of the client paying for send only the host does need to validate re
 
 **multiple aspects of Kermnet are in place to ensure no one tries to actually trade with or invest in the built in kerms(currency)**
 
-**1.its extremely inflationary,** due to kerms relying on validation of other kerms, as the computation power of computers increases they thus will produce much exponentially more kerms, devaluing all other kerms
+**1.its extremely inflationary,** due to kerms relying on validation of other kerms, as the computation power of computers increases they thus will produce exponentially more kerms, devaluing all other kerms
 
 **2.its uncapped,** adding to the previous point, having no cap or limiting system to the kerms currency makes sure its price can never go up therefor would never be treated as an investment
 
