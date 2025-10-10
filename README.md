@@ -1,6 +1,9 @@
 # Kermnet
 Alternative to the internet
+
 Framework to replace layer 2-4(OSI) of the internet
+
+## **Why replace the internet?**
 
 the modern internet mainly consists of centralized servers allowing users to connect to other users
 Main issues with centralized servers:
