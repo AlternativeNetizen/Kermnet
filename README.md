@@ -1,6 +1,6 @@
 # Kermnet
 Alternative to the internet
-
+Framework to replace layer 2-4(OSI) of the internet
 
 the modern internet mainly consists of centralized servers allowing users to connect to other users
 Main issues with centralized servers:
@@ -12,30 +12,30 @@ Main issues with centralized servers:
 3.Bad actors/authorities try to restrict your actions on the internet, disallowing any form of free speech or rights you have
 
 
-**What is Kermnet exactly?**
+## **What is Kermnet exactly?**
 
-at core, its a large mesh network utilizing cryptographic solving of hashes to provide basic rules in requests and incentive for nodes to work
+at core, its a large mesh network utilizing hard "tasks"(verifying other requests) to create basic rules in requests and incentive for nodes to work
 
 nodes broadcast connections to other nodes/clients
 
-every client holds a ledger of all/parts of every requests ever made, similar to bitcoins (full and lightweight nodes), they themselves need to mine in order to make requests
-clients need to mine a very small amount to produce a request
+every client holds a ledger of all/parts of every requests ever made, similar to any cryptographic system's (full and lightweight nodes), they themselves need to verify requests in order to make requests
+clients need to verify a very small amount of requests to produce a request
 Example:
-client would need to cryptographically solve #z requests to send 1 request at x data rate with y data amount
+client would need to cryptographically validate #z requests to send 1 request at x data rate with y data amount
 
-why mining? why crypto based? why even verify requests on kermnet?
+why mining? why have a built in currency? why even verify requests on kermnet?
 
 In-short, to give incentive for nodes to share connections with more clients
-As a client mines it produces a very small amount of whatever digital unit currency(kerms), a small percentage of kerms mined by a client go to the node which gave it access to the larger mesh, this makes nodes care about reaching clients, this requires defining what a larger mesh is so every node isn't stealing a percentage of every other nodes kerms 
+As a client validates it produces a very small amount of whatever digital unit currency(kerms), a small percentage of kerms mined by a client go to the node which gave it access to the larger mesh, this makes nodes care about reaching clients, this requires defining what a larger mesh is so every node isn't stealing a percentage of every other nodes kerms 
 
 Larger Mesh: a mesh consisting of at least 50 nodes meshed together
 
 
-**Distribution of kerms upon request:**
+### **Distribution of kerms upon request:**
 
 every request has a client,host, and nodes in between
 
-a client mines till it reaches the nessasary amount of kerms to pay each node on the way to the host, and the host themselves as the host needs to pay nodes on the way to the client in order to reply. obviously it routes by the least node amounts and varies how many node routes are used in parallel depending on how what data rate(bytes/kilobytes/megabytes/etc) its trying to send at. also pays exponentially more for higher data rates on nodes its already sending on
+a client validates till it reaches the nessasary amount of kerms to pay each node on the way to the host, and the host themselves as the host needs to pay nodes on the way to the client in order to reply. obviously it routes by the least node amounts and varies how many node routes are used in parallel depending on how what data rate(bytes/kilobytes/megabytes/etc) its trying to send at. also pays exponentially more for higher data rates on nodes its already sending on
 
 -this makes it more computationally expensive on a client to send requests to a very far or virtually unreachable host
 
@@ -45,8 +45,26 @@ this also makes sure clients can't flood nodes with extremely high data rates as
 
 
 
-**Hosts' side of things:**
-they also have to mine to send data to clients but are paid back in kerms by the clients at their own custom rate
+**Hosts'(Reciever) side of things:**
+depending on what they want they could make the client(Sender) pay kerms for both send and reply or just send
+
+in the case of the client paying for send and reply the host doesn't need to validate requests to interact with clients and the kerm cost burden is put on the clients
+
+in the case of the client paying for send only the host does need to validate requests to interact with clients and the kerm cost burden is shared by the client and host
+
+
+
+### **Addressing Crypto concerns:**
+
+**multiple aspects of Kermnet are in place to ensure no one tries to actually trade with or invest in the built in kerms(currency)**
+
+**1.its extremely inflationary,** due to kerms relying on validation of other kerms, as the computation power of computers increases they thus will produce much exponentially more kerms, devaluing all other kerms
+
+**2.its uncapped,** adding to the previous point, having no cap or limiting system to the kerms currency makes sure its price can never go up therefor would never be treated as an investment
+
+**3.Kermnet will always be in the hands of the people,** as its an alternative that can be freely switched to and isn't forced, no system can be put in place against the people(the ones actually making it work since its peer-to-peer)
+
+**4.I am open to any and all feedback,** any alert of issue or suggestion you can give me is my priority and will be made sure it assists in the development of Kermnet and its ensurance to staying open source, and for the good of the people.
 
 
 
@@ -67,7 +85,7 @@ they also have to mine to send data to clients but are paid back in kerms by the
 
 3.amount of (unit currency)kerms will be uncapped, to discourage real life trading with it
 
-4.nodes can set their own custom kerm price
+4.nodes can set their own custom kerm price/rate
 
 5.nodes can use wireless connections to reach clients as its just cheaper than wiring Ethernet or fiber to them
 
@@ -95,14 +113,15 @@ Host and Client talking over nodes:
 
 4.Self regulated by nodes custom kerm rates
 
-5. due to the inflating nature of kerms due to interactions producing more kerms, its given reason to be spent immediately instead of hoarded. 
+**5.due to the inflating nature of kerms due to interactions producing more kerms, its given reason to be spent immediately instead of hoarded.** 
+6.its extremely difficult for any whales/corps/giants to buy up the system in any way to induce profits to themselves, as they'd need impossible amounts of money or impossible amounts of computation power
 
 
 **Issues to be aware of:**
 
 1.Higher Energy Consumption
 
-2.If the first node you directly connect to is compromised then you can be tracked
+2.If the first node you directly connect to is compromised then you can be tracked easier
 
 3.its so anonymous hosts have to implement their own system for identifying and verifying users if permanence is required
 
