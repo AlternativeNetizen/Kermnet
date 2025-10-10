@@ -80,7 +80,7 @@ in the case of the client paying for send only the host does need to validate re
 
 
 
-**Important Notes:**
+### **Important Notes:**
 
 1.a client shouldn't waste more than a few ms of mining to produce a request at a reasonable distance and reasonable data rate to host
 
